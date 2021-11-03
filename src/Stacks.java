@@ -1,5 +1,8 @@
+import java.awt.desktop.SystemEventListener;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Stack;
+import java.util.TreeMap;
 
 public class Stacks {
 
@@ -9,18 +12,26 @@ public class Stacks {
         this.myStack = stack;
     }
 
-    public void store() {
+    public void store(String store) {
+        for (String val : store.split(" "))
+            myStack.push(val);
+    }
 
+    public void dispense() {
+        System.out.println(myStack.pop());
     }
 
     public static void main(String[] args) {
-        /*
-        Driver code:
-        Stack<String> pez = new Stack<>();
-        String colors = "blue red red yellow red"
+
+        // Driver code:
+        Stacks pez = new Stacks(new Stack<>());
+        String colors = "blue red red yellow red";
         pez.store(colors);
-        pez.dispense(int nWant);
-         */
+        System.out.println(pez.myStack);
+
+        while (!pez.myStack.empty())
+            pez.dispense();
+
     }
 
 
