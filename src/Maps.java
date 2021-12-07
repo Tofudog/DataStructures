@@ -15,10 +15,10 @@ public class Maps {
 //        calendar.put("March", 3);
 //        calendar.put("April", 4);
 //        calendar.put("April", 1);
+        calendar.put("foo", 12);
+        calendar.put("foo", 11);
 
-        calendar.put("a", 6);
-        System.out.println(calendar.put("a", 1));
-        System.out.println(calendar.put("a", 3));
+        System.out.println(calendar.get("foo"));
     }
 
 }
