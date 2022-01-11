@@ -10,15 +10,25 @@ class Node {
         this.next = next;
     }
 
+    public int peek() {
+        return head;
+    }
+
+    public void addFirst(int num) {
+        // temp is original first
+        Node temp = new Node(head, next=next);
+        Node first = new Node(num, next=temp);
+        System.out.println(first);
+    }
+
     // Deletes all but one
     public void clear() {
 
 
-//        while ( next != null ) {
-//            head = next.head;
-//            next = next.next;
-//        }
-
+        while ( next != null ) {
+            head = next.head;
+            next = next.next;
+        }
 
 
     }
@@ -53,9 +63,10 @@ class Node {
 
 
         System.out.println("Original List: " + node4);
-        //System.out.println("Reversed List: " + node4.reversedList());
-        node4.clear();
-        System.out.println(node4);
+        System.out.println("Reversed List: " + node4.reversedList());
+//        node4.clear();
+//        System.out.println(node4);
+        node4.addFirst(2);
 
 
     }
