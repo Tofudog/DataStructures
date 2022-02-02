@@ -66,7 +66,7 @@ public class Queues {
 //        }
 
         File file = new File("bible_books.txt");
-        Scanner myReader = new Scanner(file);
+        //Scanner myReader = new Scanner(file);
 
 
     }
